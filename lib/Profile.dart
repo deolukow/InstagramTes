@@ -36,6 +36,11 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
         title: Row(
           children: <Widget>[
             Text('deolukow_', style: TextStyle(color: white)),
+            Icon(
+              Icons.verified,
+              color: Colors.blue,
+              size: 15,
+            ),
             Icon(Icons.arrow_drop_down, color: white)
           ],
         ),
@@ -190,9 +195,13 @@ class ProfileDescription extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(
-                "Deo Lukow",
-                style: TextStyle(fontSize: 13, color: white),
+              Row(
+                children: [
+                  Text(
+                    "Deo Lukow",
+                    style: TextStyle(fontSize: 13, color: white),
+                  ),
+                ],
               ),
               Text(
                 "Creator",
@@ -243,7 +252,7 @@ class ProfileInformation extends StatelessWidget {
           Column(
             children: <Widget>[
               Text(
-                '3',
+                '12',
                 style: TextStyle(fontSize: 20, color: white),
               ),
               Text(
@@ -287,7 +296,9 @@ class LastViewed extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text('10M', style: TextStyle(fontWeight: FontWeight.bold)),
+          Text('10M',
+              style:
+                  TextStyle(fontWeight: FontWeight.bold, color: Colors.grey)),
           Text(' profile visits in the last 7 days',
               style: TextStyle(color: Colors.grey)),
         ],
